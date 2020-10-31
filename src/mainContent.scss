@@ -1,0 +1,159 @@
+@font-face {
+    font-family: MorganPosterAvec Bold;
+    font-weight: bold;
+    src: local('MorganPosterAvec'), ("./assets/font/MorganPosterAvecBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SF Pro Display Regular;
+    src: local('SFPro'), ("./assets/font/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
+}
+
+.contentContainer {
+  background-color: #F6F6F6;
+  height: 530px;
+  width: 520px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+    // align-content: center;
+
+  h2 { 
+    font-family: MorganPosterAvec;
+    text-transform: uppercase;
+    font-size: 2.15rem;
+    color: #474747;
+    text-align: center;
+  }
+
+  h3 {
+    font-family: MorganPosterAvec;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: #a0a0a0;
+    text-align: center;
+  }
+
+  h4 {
+    color: #a0a0a0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .5rem;
+    letter-spacing: -.7px;
+  }
+
+  p {
+    // font-family: SF Pro Display Regular;
+    color: #a0a0a0;
+    font-size: .7rem;
+    letter-spacing: -.7px;
+    text-align: center;
+  }
+
+  .progressLine {
+  width: 55%;
+  }
+
+  .playerContainer {
+    width: 80%;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  .playerHeadshot {
+    background-color: #f0f0f0;
+    border: 2px solid #ffffff;
+    border-radius: 90px;
+    justify-content: center;
+    width: 50px;
+    margin-right: -6px;
+
+    // #playerStats.Siakim {
+    //   z-index: 100;
+    // }
+  }
+
+  .numberBackground {
+    background-color: #ffffff;
+    // font-family: Chunkfive;
+    font-size: 16px;
+    padding-top: 14px;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    width: 34px;
+    border: 2px solid #f8f8f8;
+    border-radius: 50%;
+    padding-top: 0px;
+
+    p {
+      font-family: MorganPosterAvec;
+    }
+
+    .points {
+      font-size: 1rem;
+      letter-spacing: .3px;
+      color: black;
+    }
+  }
+
+  .imgBacker {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // padding-right: 5px;
+    width: 40px;
+  }
+
+  .statsContainer {
+    width: 80%;
+    justify-content: center;
+    align-items: center; 
+
+    P {
+      font-size: .5rem;
+    }
+  }
+
+  .buttonContainer {
+    width: 100%;
+    justify-content: center;
+
+    button {
+      background-color: #ffffff;
+      border: .5px solid black;
+      border-radius: 30px;
+      justify-content: center;
+      align-items: center;
+      // margin-right: 20px;
+
+      h4 {
+        text-transform: uppercase;
+      }
+    }
+
+    .notify {
+      margin-right: 20px;
+    }
+  }
+
+  .mobileContainer {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .iosIcon {
+    margin-right: 20px;
+  }
+}
+
+
+
+
