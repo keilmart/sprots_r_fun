@@ -4,15 +4,10 @@
     src: local('MorganPosterAvec'), ("./assets/font/MorganPosterAvecBold.otf") format("opentype");
 }
 
-@font-face {
-    font-family: SF Pro Display Regular;
-    src: local('SFPro'), ("./assets/font/FontsFree-Net-SFProDisplay-Regular.ttf") format("truetype");
-}
-
 .contentContainer {
   background-color: #F6F6F6;
-  height: 530px;
-  width: 520px;
+  height: 510px;
+  width: 500px;
   border-radius: 18px;
   display: flex;
   justify-content: center;
@@ -21,9 +16,9 @@
   z-index: 1;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-align: center;
-  align-items: center;
-    // align-content: center;
+      @media (max-width: 600px) {
+    width: 325px;
+  }
 
   h2 { 
     font-family: MorganPosterAvec;
@@ -45,14 +40,13 @@
     color: #a0a0a0;
     text-align: center;
     text-transform: uppercase;
-    font-size: .5rem;
-    letter-spacing: -.7px;
+    font-size: .4rem;
+    letter-spacing: -.8px;
   }
 
   p {
-    // font-family: SF Pro Display Regular;
     color: #a0a0a0;
-    font-size: .7rem;
+    font-size: .85rem;
     letter-spacing: -.7px;
     text-align: center;
   }
@@ -62,9 +56,11 @@
   }
 
   .playerContainer {
+    text-decoration: overline;
     width: 80%;
     justify-content: center;
     margin-right: 10px;
+    margin-top: 20px;
   }
 
   .playerHeadshot {
@@ -74,24 +70,20 @@
     justify-content: center;
     width: 50px;
     margin-right: -6px;
-
-    // #playerStats.Siakim {
-    //   z-index: 100;
-    // }
   }
 
   .numberBackground {
     background-color: #ffffff;
-    // font-family: Chunkfive;
     font-size: 16px;
     padding-top: 14px;
     justify-content: center;
     align-items: center;
     height: 34px;
     width: 34px;
-    border: 2px solid #f8f8f8;
+    border: 2px solid lightgray;
     border-radius: 50%;
     padding-top: 0px;
+    margin-top: 7px;
 
     p {
       font-family: MorganPosterAvec;
@@ -105,20 +97,30 @@
   }
 
   .imgBacker {
+    margin: 0 2px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // padding-right: 5px;
     width: 40px;
   }
 
   .statsContainer {
     width: 80%;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    margin-top: -22px;
+    margin-bottom: 20px;
 
     P {
       font-size: .5rem;
+    }
+  }
+
+  .download {
+    width: 100%;
+
+    h4 {
+      font-size: .8rem;
     }
   }
 
@@ -132,10 +134,12 @@
       border-radius: 30px;
       justify-content: center;
       align-items: center;
-      // margin-right: 20px;
+      padding: 6px 15px;
 
       h4 {
+        font-size: .8rem;
         text-transform: uppercase;
+        font-weight: bold;
       }
     }
 
@@ -147,10 +151,19 @@
   .mobileContainer {
     width: 100%;
     justify-content: center;
+    padding-bottom: 15px;
   }
 
   .iosIcon {
     margin-right: 20px;
+  }
+
+  .notifyButton {
+    padding-right: 10px;
+  }
+
+  .depositButton {
+    padding-right: 10px;
   }
 }
 

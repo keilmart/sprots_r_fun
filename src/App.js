@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-// import Loader from "react-loader-spinner";
 import MainContent from "./MainContent.js";
 import Links from "./Links.js";
 import './App.scss';
 import { Card } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './assets/logo/logo@3x.png';
 
 class App extends Component {

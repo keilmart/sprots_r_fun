@@ -1,9 +1,32 @@
 .linkContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+  margin-right: 130px;
   justify-content: space-evenly;
+  flex-wrap: nowrap;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-top: 30px;
+    margin-right: 0;
+  }
 }
 
 li {
+    font-size: .8rem;
     list-style: none;
     text-transform: uppercase;
+    color: #a0a0a0;
+    padding: 0 10px;
+  }
+
+li:hover {
+  color: #fdae21;
+  transition: 0.8s;
+}
+
+  span {
+    font-size: .7rem;
     color: #a0a0a0;
   }

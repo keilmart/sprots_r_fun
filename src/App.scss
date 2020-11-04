@@ -22,12 +22,17 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 }
 
 .mainLogo {
-  width: 275px;
+  width: 265px;
   padding-bottom: 32px;;
+
+  @media (max-width: 600px) {
+    width: 190px;
+  }
 }
 
-h4, h3, h2, h1, p, img {
+h4, h3, h2, h1, p, img, button, a {
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 

@@ -27,7 +27,7 @@ class MainContent extends Component {
                     "points": 29
                 },
                 {
-                    "last_name": "Gordon",
+                    "last_name": "Gordon",  
                     "points": 16
                 },
                 {
@@ -51,17 +51,20 @@ class MainContent extends Component {
         }
     }
 
-    playerFinalData= () => {
-    let playerInfo = this.state.players.map((playerStats) => {
-      return {
-        LastName: playerStats.last_name,
-        Points: playerStats.points,
-      };
-    });
-    this.setState({
-      playerFinalData: playerInfo,
-    });
-  };
+    // This below is an example of taking th function and saving into state rather than mapping over in the render //
+
+//     playerFinalData= () => {
+//     let playerInfo = this.state.players.map((playerStats) => {
+//       return {
+//         LastName: playerStats.last_name,
+//         Points: playerStats.points,
+//       };
+//     });
+//     this.setState({
+//       playerFinalData: playerInfo,
+//     });
+//     console.log(this.state.playerFinalData.last_name)
+//   };
 
     render() {
         console.log(this.state.playerFinalData.last_name)
@@ -73,48 +76,71 @@ class MainContent extends Component {
                     <h3>come back @ 7:30pm to track it live!</h3>
                     <p>Pro Tip: You can manage your PlayLine's until they go live in the Upcoming area</p>
                     <div class="flex playerContainer">
-                        <img src={playerOne} class="playerHeadshot" alt="Dangelo Russel Headshot" />
-                        <img src={playerTwo} class="playerHeadshot" alt="Aaron Gordon Headshot" />
-                        <img src={playerThree} class="playerHeadshot" alt="Lebron James Headshot" />
-                        <img src={playerFour} class="playerHeadshot" alt="Kyle Lowry Headshot" />
-                        <img src={playerFive} class="playerHeadshot" alt="Pascal Siakim Headshot" />
-                        <img src={playerSix} class="playerHeadshot" alt="Kawhi Keonard Headshot" />
-                        <img src={playerSeven} class="playerHeadshot" alt="Anthony Davis Headshot" />
+                        <a href="https://www.nba.com/stats/player/2544/career/">
+                            <img src={playerOne} class="playerHeadshot" alt="Le                   bron James Headshot" />
+                        </a>
+                        {/* <p>{this.state.players.last_name[2]}</p> */}
+                        <a href="https://www.nba.com/player/203076/anthony-davis">
+                            <img src={playerTwo} class="playerHeadshot" alt="Anthony Davis Headshot" />
+                        </a>
+                        <a href="https://www.nba.com/player/203932/aaron-gordon">
+                            <img src={playerThree} class="playerHeadshot" alt="Aaron Gordon Headshot"  />
+                        </a>
+                        <a href="https://www.nba.com/player/1627783/pascal-siakam">
+                            <img src={playerFour} class="playerHeadshot" alt= "Pascal Siakim Headshot"/>
+                        </a>
+                        <a href="https://www.nba.com/player/202695/kawhi-leonard">
+                            <img src={playerFive} class="playerHeadshot" alt="Kawhi Leonard Headshot"  />
+                        </a>
+                        <a href="https://www.basketball-reference.com/players/l/lowryky01.html">
+                            <img src={playerSix} class="playerHeadshot" alt="Kyle Lowry Headshot"/>
+                        </a>
+                        <a href="https://www.nba.com/player/1626156/dangelo-russell">
+                            <img src={playerSeven} class="playerHeadshot" alt="Anthony Davis Headshot" />
+                        </a>
                     </div>
                     <div class="flex statsContainer">
                         {this.state.players.map((playerStats) => {
                             return (
                                 <li className="flex imgBacker" key={playerStats.points} id={playerStats.last_name}>
                                     <p>{playerStats.last_name}</p>
-                                    <div class="flex numberBackground">
-                                    <p class="points">{playerStats.points}</p>
-                                    </div>
+                                        <div class="flex numberBackground">
+                                            <p class="points">{playerStats.points}</p>
+                                        </div>
                                     <p>pts</p>
                                 </li>
                             );
                         })}
                     </div>      
                         <div class="flex buttonContainer"> 
-                    <button class="flex notify">
-                        <img src={notify} class="flex notifyButton" alt="Button to notify user" />
-                        <h4>notify</h4>
-                    </button>
-                    <button class="flex">
-                        <img src={deposit} class="flex depositButton" alt="Button for user to deposit" />
-                        <h4>deposit</h4>
-                    </button>
+                    <a href="https://notify.ly/">
+                        <button class="flex notify">
+                            <img src={notify} class="flex notifyButton" alt="Button to notify user" />
+                            <h4>notify me</h4>
+                        </button>
+                    </a>
+                    <a href="https://www.merriam-webster.com/dictionary/deposit%20money">
+                        <button class="flex">
+                            <img src={deposit} class="flex depositButton" alt="Button for user to deposit" />
+                            <h4>deposit</h4>
+                        </button>
+                    </a>
                     </div>
-                    <h4>download the app</h4>
+                    <div class="download">
+                        <h4>download the app</h4>
+                    </div>
                     <div class="flex mobileContainer">
-                    <img src={ios} class="iosIcon" alt="Button for the ios store" />
-                    <img src={google} class="googleIcon" alt="Button for the google store" />
+                        <a href="https://www.apple.com/ca/app-store/">
+                            <img src={ios} class="iosIcon" alt="Button for the ios store" />
+                        </a>
+                        <a href="https://play.google.com/store">
+                            <img src={google} class="googleIcon" alt="Button for the google store" />
+                        </a>
                     </div>
                 </div>
             </main>
         )
     }
 }
-
-
 
 export default MainContent;
